@@ -1,0 +1,12 @@
+<h1>Index of People</h1>
+<%= link_to 'Create New Person', new_person_path %>
+<br />
+<% @people.each do |person| %>
+<%= person.name %>
+<%= person.age %>
+<%= link_to 'Show', person_path(person) %>
+<%= link_to 'Edit', edit_person_path(person) %>
+<%= link_to 'Delete', person, method: :delete %>
+<br />
+<% end %>
+
