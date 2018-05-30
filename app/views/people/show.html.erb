@@ -5,4 +5,7 @@
 <%= @person.eye_color %>
 <%= @person.gender %>
 <%= @person.alive %></p>
+<h2> <%= "#{@person.name}'s Hobbies (if any):" %></h2>
+<% h = Hobby.where(person_id: @person.id) %>
+<%= h.all %>
 <%= link_to 'Index', people_path %>
